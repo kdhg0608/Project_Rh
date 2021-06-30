@@ -12,13 +12,15 @@ public class TapHome : MonoBehaviour {
 
     private void Start()
     {
-        ///Lineが増えた際に追加の必要がある。
+        //Lineが増えた際に追加の必要がある。
         GameObject.Find("NodeLine1");
         GameObject.Find("NodeLine1/TapPosition").GetComponent<checkTiming>();
         toCheckTiming.Add(GameObject.Find("NodeLine1"), GameObject.Find("NodeLine1/TapPosition").GetComponent<checkTiming>());
         toCheckTiming.Add(GameObject.Find("NodeLine2"), GameObject.Find("NodeLine2/TapPosition").GetComponent<checkTiming>());
         toCheckTiming.Add(GameObject.Find("NodeLine3"), GameObject.Find("NodeLine3/TapPosition").GetComponent<checkTiming>());
-    }
+        toCheckTiming.Add(GameObject.Find("NodeLine4"), GameObject.Find("NodeLine4/TapPosition").GetComponent<checkTiming>());
+        toCheckTiming.Add(GameObject.Find("NodeLine5"), GameObject.Find("NodeLine5/TapPosition").GetComponent<checkTiming>());
+    }   
 
     private void Update()
     {
@@ -34,3 +36,7 @@ public class TapHome : MonoBehaviour {
     }
 
 }
+
+
+
+

@@ -53,20 +53,20 @@ public class Settings : MonoBehaviour {
         {
             case 1:
                 Count++;
-                comment.text = "<color=\"#5BFE6F\">Good!</color>\nCombo " + Count;
+                comment.text = "<color=\"white\">Good</color>\nCombo " + Count;
                 comment.gameObject.SetActive(true);
                 break;
 
             case 2:
                 Count++;
-                comment.text = "<color=\"#FEFB58\">Perfect!!</color>\nCombo "+Count;
+                comment.text = "<color=\"white\">Perfect</color>\nCombo " + Count;
                 comment.gameObject.SetActive(true);
                 break;
             case 0:
 
             default:
                 Count = 0;
-                comment.text = "<color=\"red\">Miss</color>";
+                comment.text = "<color=\"white\">Miss</color>";
                 comment.gameObject.SetActive(true);
                 break;
         }

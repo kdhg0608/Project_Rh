@@ -5,7 +5,7 @@ public class CommentMesh : MonoBehaviour {
     private string nowText;
     private string newText;
     private float time = 0;
-    private float destoryTime = 4f;
+    private float destoryTime = 3f;
     private TextMesh textMesh;
 
     private void Awake()
@@ -19,7 +19,7 @@ public class CommentMesh : MonoBehaviour {
         if (nowText == newText)
         {
             time += Time.deltaTime;
-            textMesh.characterSize = 1.4f + (time/1.3f);
+            textMesh.characterSize = 1.5f + (time/1.3f);
             if(time >= 0.1)
             {
                 var alfa = textMesh.color.a - destoryTime * Time.deltaTime;
@@ -37,7 +37,7 @@ public class CommentMesh : MonoBehaviour {
     {
 
         time = 0f;
-        textMesh.characterSize = 1.4f;
+        textMesh.characterSize = 1.3f;
         nowText = newText;
         textMesh.color = new Color(textMesh.color.r, textMesh.color.g, textMesh.color.b, 1f);
     }
